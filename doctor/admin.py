@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Specialization ,Designation,AvailableTime,Doctor
+from .models import Specialization ,Designation,AvailableTime,Doctor,Review
+
 
 class DoctorAdmin(admin.ModelAdmin):
     list_display = ['first_name','last_name','image','meet_link' ,'fee']
@@ -21,3 +22,4 @@ admin.site.register(Doctor,DoctorAdmin)
 admin.site.register(Specialization,SpecializationAdmin)
 admin.site.register(Designation,DesignationAdmin)
 admin.site.register(AvailableTime)
+admin.site.register(Review)
