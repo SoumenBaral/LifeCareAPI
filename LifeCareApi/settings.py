@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'appointment',
     'service',
     'contact_us',
+    'rest_framework',
 
 
 ]
