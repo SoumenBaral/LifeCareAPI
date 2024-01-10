@@ -6,6 +6,9 @@ class DoctorViewSet(viewsets.ModelViewSet):
     queryset = models.Doctor.objects.all()
     serializer_class = serializers.DoctorSerializer
 
+    
+
+
 
 class DesignationViewSet(viewsets.ModelViewSet):
     queryset = models.Designation.objects.all()
