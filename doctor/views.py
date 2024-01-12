@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from . import models , serializers
 from rest_framework import viewsets
-
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 class DoctorViewSet(viewsets.ModelViewSet):
     queryset = models.Doctor.objects.all()
     serializer_class = serializers.DoctorSerializer
@@ -16,8 +16,10 @@ class DesignationViewSet(viewsets.ModelViewSet):
 
 
 class SpecializationViewSet(viewsets.ModelViewSet):
+  
     queryset = models.Specialization.objects.all()
     serializer_class = serializers.SpecializationSerializer
+    permission_classes = (IsAuthenticatedOrReadOnly,)
 
 class AvailableTimeViewSet(viewsets.ModelViewSet):
     queryset = models.AvailableTime.objects.all()
