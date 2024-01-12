@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-=6wo8-vro(388*3g^7k_6coy8w-%m=%r$78om25fsxhp^7s=z2
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+CSRF_TRUSTED_ORIGINS = ['https://lifecareapi.onrender.com','https://*.127.0.0.1']
 
 # Application definition
 
@@ -132,7 +132,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
